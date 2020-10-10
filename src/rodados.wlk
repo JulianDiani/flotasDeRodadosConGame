@@ -45,7 +45,7 @@ object motorBataton{
 	method peso(){return 500}
 	method velocidad(){return 80}
 }
-class AutosEspeciales{
+class AutoEspecial{
 	var property capacidad
 	var property velocidadMaxima
 	var property peso

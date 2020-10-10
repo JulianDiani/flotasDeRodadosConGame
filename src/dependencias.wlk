@@ -1,3 +1,4 @@
+import rodados.*
 class Dependencia{
 	var rodados=[]
 	var property empleados

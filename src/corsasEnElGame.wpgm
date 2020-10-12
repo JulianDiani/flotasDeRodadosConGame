@@ -1,7 +1,20 @@
 import wollok.game.*
+import rodados.*
 
 program corsasEnElGame {
-	// hacer las inicializaciones necesarias 
-	
+	game.title("corsa en el game")
+	game.width(15)
+	game.height(15)
+	game.ground("ground.png")
+	var cachito=new Corsa(color=rojo)
+	cachito.position(game.center())
+	keyboard.up().onPressDo({cachito.moverHacia("norte")})
+	keyboard.down().onPressDo({cachito.moverHacia("sur")})
+	keyboard.left().onPressDo({cachito.moverHacia("este")})
+	keyboard.right().onPressDo({cachito.moverHacia("oeste")})
+	keyboard.r().onPressDo({cachito.image(rojo.image())})
+	keyboard.a().onPressDo({cachito.image(azul.image())})
+	keyboard.v().onPressDo({cachito.image(verde.image())})
+	game.addVisual(cachito)
 	game.start()
 }
